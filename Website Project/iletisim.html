@@ -1,44 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="iletisimstyle.css">
+
     <title>İletişim</title>
 </head>
-<body>
-    <div>
-        <h2>İletişim bilgilerinizi doldurunuz.</h2>
+
+<body class="bodyy">
+    <div class="container">
+        <form onsubmit="kontrolForm()" name="myForm" action="iletisimbilgileri.php" method="POST">
+
+            <label for="fname">Ad:</label>
+            <input type="text" id="fname" name="firstname" placeholder="Adınız..">
+
+            <label for="lname">Soyad:</label>
+            <input type="text" id="lname" name="lastname" placeholder="Soyadınız..">
+
+            <label for="email">E-mail:</label>
+            <input type="email" class="eposta" id="mail" name="email" placeholder="E-mailiniz..">
+
+            <label for="age">Yaşınız:</label>
+            <input type="number" name="age" min="0" max="110" placeholder="Yaşınız..">
+            <br>
+            <br>
+
+            <label>Cinsiyet:</label>
+            <label for="cinsiyet">Erkek</label>
+            <input type="radio" name="cinsiyet" value="Erkek">
+
+            <label for="cinsiyet">Kadın</label>
+            <input type="radio" name="cinsiyet" value="Kadin">
+            <br>
+            <br>
+
+            <label for="city">Şehir</label>
+            <select id="city" name="city">
+                <option value="Sakarya">Sakarya</option>
+                <option value="İstanbul">İstanbul</option>
+                <option value="Ankara">Ankara</option>
+                <option value="Diğer">Diğer</option>
+            </select>
+
+            <label for="subject">Konu ve İçerik</label>
+            <textarea id="subject" name="subject" placeholder="Merak ettiğiniz konu.." style="height:200px"></textarea>
+
+            <input onclick="ValidateEmail(document.myForm.email)" name="Kaydet" type="submit" value="Kaydet">
+
+            <input type="reset" class="sifirla" value="Sıfırla">
+        </form>
     </div>
-    <div>
-        
-        <p>
-            Adınız: <input type="text" name="ad" placeholder="Adınızı giriniz" required>
-        </p>
-        <p>
-            Soyad: <input type="text" name="soyad" placeholder="Soyadınızı giriniz" required>
-        </p>
-        <p>
-            E-Mail: <input type="email" name="email" required>
-        </p>
-        <p>
-            Erkek <input type="radio" name="cinsiyet">
-            Kadın <input type="radio" name="cinsiyet">
-        </p>
-        
-        <p>
-            Doğum Tarihiniz: <input type="date">
-        </p>
-        
-        <h3 style="text-decoration: underline">Hobileriniz:</h2>
-        
-        <p>
-            Basketbol<input type="checkbox" name="hobi">
-            Futbol<input type="checkbox" name="hobi">
-            Film-Dizi<input type="checkbox" name="hobi">
-            Kitap Okumak<input type="checkbox" name="hobi">
-        </p>
-        
-        <input type="submit" value="Kaydet">
-        <input type="reset" value="Sıfırla">
-    </div>
+
+    <script type="text/javascript" src="kontrol.js">
+
+    </script>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 </body>
+
 </html>
