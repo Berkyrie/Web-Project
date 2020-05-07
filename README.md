@@ -1,2 +1,2 @@
 # WebProject
- Website about me and my hometown
+A website about me, my hobbies, my skills and my hometown.
