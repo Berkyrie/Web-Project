@@ -11,7 +11,7 @@
         $sifre=$_POST["password"];
     ?>
     <?php   
-        if(($name=="b191210371@gmail.com")&&($sifre=="36193055596")) {
+        if(($name=="b191210371@ogr.sakarya.edu.tr")&&($sifre=="36193055596")) {
             
             echo "<h1>BAŞARILI GİRİŞ!!!</h1>";
             
